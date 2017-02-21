@@ -1,4 +1,4 @@
-# toranproxy-patch
+# Toranproxy patch fix Composer doesn't cache Toran Proxy JSON Files
 [Composer doesn't cache Toran Proxy JSON files](https://github.com/composer/composer/issues/3799)
 
 
@@ -7,6 +7,7 @@ Toran proxy when generate to file repo/private/packages.json usually default sha
 
 access to http://packages.private-domain-xxx.net/repo/private/packages.json
 view orginal:
+```json
 {
   "providers": {
     "organization/package-xxxx": {
@@ -14,10 +15,10 @@ view orginal:
     }
   }
  }
- 
+ ```
  
 after run patch fix it.
-
+```json
 {
   "providers": {
     "organization/package-xxxx": {
@@ -25,3 +26,4 @@ after run patch fix it.
     }
   }
  }
+```
